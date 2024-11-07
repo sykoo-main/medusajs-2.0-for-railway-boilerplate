@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-
+import  Logo  from "@modules/custom/Logo"
 import { listRegions } from "@lib/data/regions"
 import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
@@ -25,7 +25,7 @@ export default async function Nav() {
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              Medusa Store
+              <Logo />
             </LocalizedClientLink>
           </div>
 

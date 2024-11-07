@@ -15,7 +15,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL.replace('https://', ''),
+        hostname: process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL.replace(
+          "https://",
+          ""
+        ),
       },
       {
         protocol: "https",
@@ -29,11 +32,15 @@ const nextConfig = {
         protocol: "https",
         hostname: "medusa-server-testing.s3.us-east-1.amazonaws.com",
       },
+      {
+        protocol: "https",
+        hostname: "backend-production-39f2.up.railway.app",
+      },
     ],
   },
   serverRuntimeConfig: {
-    port: process.env.PORT || 3000
-  }
+    port: process.env.PORT || 3000,
+  },
 }
 
 module.exports = nextConfig

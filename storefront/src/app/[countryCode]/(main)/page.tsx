@@ -4,6 +4,7 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { getCollectionsWithProducts } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
+import Head from "next/head"
 
 export const metadata: Metadata = {
   title: "Medusa Next.js Starter Template",
@@ -25,6 +26,17 @@ export default async function Home({
 
   return (
     <>
+      <Head>
+        <title>Sykooo - Your Traditional Indian Wear</title>
+        <meta
+          name="description"
+          content="Discover the elegance of traditional Indian clothing at Sykooo. Shop our collection of sarees, salwar kameez, and more."
+        />
+        <meta
+          name="keywords"
+          content="Indian clothing, sarees, salwar kameez, traditional wear, ethnic wear"
+        />
+      </Head>
       <Hero />
       <div className="py-12">
         <ul className="flex flex-col gap-x-6">
